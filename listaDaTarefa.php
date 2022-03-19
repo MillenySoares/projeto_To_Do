@@ -13,7 +13,7 @@ $tarefas = json_decode($conteudo);
 fclose($arq);
 
 echo "<ol>";
-foreach($tarefas as $i => $tarefa) echo "<li>$tarefas->nome <a href=detalhes.php?id=$i>Ver detalhes</a></li>";
+foreach($tarefas as $i => $tarefa) echo "<li>$tarefa->nome <a href=detalhesToDo.php?id=$i>Ver detalhes</a></li>";
 echo "</ol>";
 ?>
 <?php

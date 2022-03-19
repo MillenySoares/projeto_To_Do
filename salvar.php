@@ -1,12 +1,13 @@
 <?php
     $title = "Projeto - Aula 10";
     include "includes/cabecalho.php";
+    
 ?>
 
 <?php
     require_once "models/todo.php";
 
-    $novoTarefa = new tarefas($_POST['nome'], $_POST['data'], $_POST['descricao']);
+    $novaTarefa = new tarefas($_POST['nome'], $_POST['data'], $_POST['descricao']);
     $nomeArq = "tarefas.json";
     
     if(!file_exists($nomeArq)){
@@ -24,7 +25,7 @@
     fclose($arq);
  
     session_start();
-    $_SESSION['tarefaCriada'] = $novaTarefa->titulo;
+    $_SESSION['tarefaCriada'] = $novaTarefa->nome;
     header('Location: formulario.php');
     
 ?>
