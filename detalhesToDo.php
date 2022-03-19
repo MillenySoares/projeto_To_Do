@@ -17,7 +17,7 @@
     echo "<h1> Informações da Tarefa - " . $tarefas[$pos]->nome . "</h1>";
     
     echo "<ul>";
-    echo "<li><b> Data de Entrega: </b>" . $tarefas[$pos]->entrega . "</li>";
+    echo "<li><b> Data de Entrega: </b>" . $tarefas[$pos]->data . "</li>";
     echo "<li><b> Descrição: </b>" . $tarefas[$pos]->descricao . "</li>";
     echo "</ul>";
 
